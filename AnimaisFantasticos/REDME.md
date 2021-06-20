@@ -11,11 +11,11 @@
 </head>
 <body>
     <nav class="menu">
-            <ul >
+            <ul>
             <li> <a href="#animais">Animais</a> </li>
-            <li><a href="#faq"></a>Faq</li>
+            <li><a href="#faq">Faq</a></li>
             <li><a href="#contato">Contato</a></li>
-            <li><a href="#http://"></a>DEV  ►</li>
+            <li><a href="#http://">DEV  ►</a></li>
         </ul>
     </nav>
     <section class="grid-section animais " id="animais">

@@ -89,6 +89,9 @@ body{
     overflow-y:scroll;
     grid-column: 2;
 }
+.animais-lista li{
+    cursor: pointer;
+}
 .animais-lista::-webkit-scrollbar{
     width: 18px;
 }
@@ -112,6 +115,9 @@ body{
 .faq-lista{
 grid-column: 2/4;
 }
+.faq-lista{
+    cursor: pointer;
+    }
 .faq-lista dt{
 font-family: 'IBM Plex Mono', monospace;
 font-weight:bold;
@@ -163,6 +169,29 @@ color: #e54;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
 }
+.js-tabcontent section{
+    display: none;
+
+}
+.js-tabcontent section.ativo{
+    display: block !important;
+    animation:show .5s forwards;
+
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+
+    }
+
+    
+}
 @media (max-width: 700px ){
     body{
         grid-template-columns: 1fr;
@@ -194,4 +223,38 @@ color: #e54;
     .copy{
         margin-bottom: 0px;
     }
+}
+.js-accordeon dd{
+    display:none;
+}
+.js-accordeon dt::after{
+    content:"☟";
+    margin-left: 10px;
+}
+.js-accordeon dt.ativo::after{
+    content:"👀";
+    margin-left: 10px;
+}
+.js-accordeon dd.ativo{
+    display:block;
+    animation: slideDown .5s forwards;
+}
+@keyframes slideDown{
+    from {
+        opacity: 0;
+        max-height:0 ;
+    }
+    to{
+        opacity: 1;
+        max-height: 200px;
+    }
+}
+.js-scroll{
+    opacity: 0;
+    transform: translate3d(-30, 0,0);
+    transition: .3s;
+}
+.js-scroll.ativo{
+    opacity: 1;
+    transform: translate3d(0, 0,0);
 }
